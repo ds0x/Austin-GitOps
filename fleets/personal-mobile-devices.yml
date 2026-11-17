@@ -64,9 +64,11 @@ controls:
   # ios_updates:
   #   deadline: "2030-04-01"
   #   minimum_version: "18.5"
-  # ipados_updates:
-  #   deadline: "2030-04-01"
-  #   minimum_version: "18.5"
+  # Goal: no iPad below 26.5. Apple no longer offers 26.5, so this targets
+  # 26.7.3, the current iPadOS 26 build.
+  ipados_updates:
+    deadline: "2026-12-31"
+    minimum_version: "26.7.3"
 
 ###########################################################
 # Apps to make available from the Apple App Store or Google Play
