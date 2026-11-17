@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>PayloadContent</key>
+			<dict>
+				<key>com.apple.Bluetooth</key>
+				<dict>
+					<key>Forced</key>
+					<array>
+						<dict>
+							<key>mcx_preference_settings</key>
+							<dict>
+								<key>PrefKeyServicesEnabled</key>
+								<false/>
+							</dict>
+						</dict>
+					</array>
+				</dict>
+			</dict>
+			<key>PayloadDescription</key>
+			<string>Turns off Bluetooth Sharing so the Mac can't receive files over Bluetooth.</string>
+			<key>PayloadDisplayName</key>
+			<string>Bluetooth Sharing</string>
+			<key>PayloadIdentifier</key>
+			<string>com.austinintentops.bluetooth-sharing.mcx</string>
+			<key>PayloadType</key>
+			<string>com.apple.ManagedClient.preferences</string>
+			<key>PayloadUUID</key>
+			<string>8390E913-4FDB-4D02-8C1E-1C021AF6EDFC</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Turns off Bluetooth Sharing (CIS macOS 2.3.3.10). Adapted from Fleet's disable-bluetooth-file-sharing.mobileconfig.</string>
+	<key>PayloadDisplayName</key>
+	<string>Disable Bluetooth Sharing</string>
+	<key>PayloadIdentifier</key>
+	<string>com.austinintentops.bluetooth-sharing</string>
+	<key>PayloadOrganization</key>
+	<string>Austin IntentOps</string>
+	<key>PayloadRemovalDisallowed</key>
+	<true/>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>C85FD59E-CD73-4D0B-A4E1-FACDCEB53839</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

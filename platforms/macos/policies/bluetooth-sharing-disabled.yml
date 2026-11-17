@@ -1,0 +1,7 @@
+- name: Bluetooth Sharing disabled (Engineering)
+  description: Checks that Bluetooth Sharing is off for every user on Engineering Macs (CIS macOS 2.3.3.10). Bluetooth Sharing lets other paired devices send files to this Mac.
+  resolution: Your Mac should turn off Bluetooth Sharing on its own. If this policy keeps failing, open System Settings > General > Sharing and turn off Bluetooth Sharing, or contact IT.
+  query: SELECT 1 WHERE NOT EXISTS (SELECT 1 FROM sharing_preferences WHERE bluetooth_sharing = 1);
+  platform: darwin
+  labels_include_any:
+    - Engineering department
