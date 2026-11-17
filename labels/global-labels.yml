@@ -4,3 +4,7 @@
   criteria:
     vital: end_user_idp_department
     value: Engineering
+- name: Hosts with more than 30 days of uptime
+  description: Hosts that have not restarted in more than 30 days
+  query: SELECT 1 FROM uptime WHERE total_seconds > 2592000;
+  label_membership_type: dynamic
