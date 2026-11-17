@@ -43,6 +43,21 @@ org_settings:
     ###########################################################
     transparency_url: https://pointerpointer.com
 
+  webhook_settings:
+    ###########################################################
+    # Send every Fleet activity (logins, script runs, profile
+    # and policy changes, ...) to a webhook as it happens.
+    #
+    # Note: The destination URL is a repository "secret" because
+    # anyone who has it can read the activity payloads.
+    #
+    # Read more:
+    #   • https://fleetdm.com/docs/configuration/yaml-files#webhook-settings
+    ###########################################################
+    activities_webhook:
+      enable_activities_webhook: true
+      destination_url: $FLEET_ACTIVITIES_WEBHOOK_URL
+
   ###########################################################
   # Uncomment to use single sign-on (SSO) for admins accessing Fleet.
   #
