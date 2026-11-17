@@ -1,0 +1,20 @@
+- name: macOS - Cloudflare DNS in use
+  query: |
+    SELECT 1 WHERE
+      EXISTS (
+        SELECT 1 FROM dns_resolvers
+        WHERE type = 'nameserver'
+          AND address IN ('1.1.1.1', '1.0.0.1', '2606:4700:4700::1111', '2606:4700:4700::1001')
+      )
+      AND NOT EXISTS (
+        SELECT 1 FROM dns_resolvers
+        WHERE type = 'nameserver'
+          AND address NOT IN ('1.1.1.1', '1.0.0.1', '2606:4700:4700::1111', '2606:4700:4700::1001')
+      );
+  critical: false
+  description: Checks that this Mac sends DNS lookups only to Cloudflare (1.1.1.1 and 1.0.0.1). If it doesn't, Fleet runs set-cloudflare-dns.sh to switch every network service to Cloudflare DNS.
+  resolution: |
+    Fleet will switch this Mac to Cloudflare DNS automatically. If this policy keeps failing, disconnect from any VPN and check System Settings > Network > (your connection) > Details > DNS, or contact IT.
+  platform: darwin
+  run_script:
+    path: ../scripts/set-cloudflare-dns.sh
