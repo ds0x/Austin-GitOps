@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>forceDelayedMajorSoftwareUpdates</key>
+			<true/>
+			<key>enforcedSoftwareUpdateMajorOSDeferredInstallDelay</key>
+			<integer>90</integer>
+			<key>PayloadDisplayName</key>
+			<string>Major update deferral</string>
+			<key>PayloadIdentifier</key>
+			<string>com.austinintentops.defer-major-updates.restrictions</string>
+			<key>PayloadType</key>
+			<string>com.apple.applicationaccess</string>
+			<key>PayloadUUID</key>
+			<string>0AEF18E2-AAFE-4F37-96EC-35CA31450ACF</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>PayloadDescription</key>
+	<string>Hides major macOS upgrades (such as macOS 27) until 90 days after Apple releases them. Applies to Macs outside the macOS 27 beta testers label.</string>
+	<key>PayloadDisplayName</key>
+	<string>Defer major macOS upgrades</string>
+	<key>PayloadIdentifier</key>
+	<string>com.austinintentops.defer-major-updates</string>
+	<key>PayloadOrganization</key>
+	<string>Austin IntentOps</string>
+	<key>PayloadRemovalDisallowed</key>
+	<true/>
+	<key>PayloadScope</key>
+	<string>System</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>0896B242-BE4A-422A-9EDA-5689D5C2D8FA</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
