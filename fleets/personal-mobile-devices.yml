@@ -74,6 +74,14 @@ controls:
 # Apps to make available from the Apple App Store or Google Play
 ###########################################################
 software:
+  fleet_maintained_apps:
+    # Note: this fleet holds phones and tablets, so this Windows app only
+    # installs if a Windows PC is moved into the fleet.
+    - slug: cloudflare-warp/windows # Cloudflare WARP (Cloudflare One) for Windows
+      self_service: true
+      post_install_script:
+        path: ../platforms/windows/scripts/configure-cloudflare-warp.ps1
+
   app_store_apps:
     ###########################################################
     # iOS apps
