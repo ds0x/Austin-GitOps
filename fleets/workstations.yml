@@ -197,14 +197,12 @@ software:
 
     # Windows apps
     # …
+    # Fleet allows only one of zoom/windows or zoom-arm64/windows per fleet,
+    # so ARM-based Windows PCs don't get Zoom from this fleet.
     - slug: zoom/windows # Zoom for Windows (x64)
       self_service: true
       labels_include_any:
         - "x86-based Windows hosts"
-    - slug: zoom-arm64/windows # Zoom for Windows (ARM64)
-      self_service: true
-      labels_include_any:
-        - "ARM-based Windows hosts"
     # - slug: slack/windows # Slack for Windows
     #   self_service: true
     #   setup_experience: true
